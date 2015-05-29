@@ -1,0 +1,4 @@
+solid
+mountain
+movepenalty 1
+defense 2

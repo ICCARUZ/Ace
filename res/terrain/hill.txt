@@ -1,0 +1,4 @@
+mountain
+vision 1
+movepenalty 1
+defense 1

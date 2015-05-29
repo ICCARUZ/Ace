@@ -1,0 +1,5 @@
+solid
+mountain
+vision 3
+movepenalty 2
+defense 3
