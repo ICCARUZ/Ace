@@ -1,3 +1,4 @@
+package Editor;
 
 
 import java.io.BufferedWriter;
@@ -18,7 +19,8 @@ import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.BasicGameState;
 import org.newdawn.slick.state.StateBasedGame;
 
-import UI.TileSelector;
+import Core.Camera;
+import Core.Map;
 
 public class Editor extends BasicGameState
 {
@@ -31,6 +33,7 @@ public class Editor extends BasicGameState
 	Image toolImage;
 	TileSelector selector;
 	int[] mouse;
+	int activeTeam;
 	
 	public enum Tool
 	{

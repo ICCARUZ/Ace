@@ -1,3 +1,4 @@
+package Units;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -7,21 +8,26 @@ import org.newdawn.slick.Image;
 import org.newdawn.slick.SpriteSheet;
 import org.newdawn.slick.geom.Rectangle;
 
+import Core.Map;
+import Core.Player;
+import Core.Terrain;
+
 public abstract class Unit 
 {
-	Map board;
-	int[][] reachable;
-	Image image;
-	Player owner;
+	public Map board;
+	public int[][] reachable;
+	public Image image;
+	public Player owner;
 	float scale;
-	boolean canMove = true;
-	boolean canAct = true;
+	public boolean canMove = true;
+	public boolean canAct = true;
 	public static SpriteSheet sheet;
 	public String name;
 	
-	int x, y;
-	int speed = 4, range = 2, attack = 2;
-	int[] hp = {3, 3}; // HP STORED AS {CURRENT, MAX}
+	public int x, y;
+	
+	public int speed = 4, range = 2, attack = 2;
+	public int[] hp = {3, 3}; // HP STORED AS {CURRENT, MAX}
 	double distance;
 	
 	Rectangle tile = new Rectangle(1,1,1,1);

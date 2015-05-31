@@ -1,3 +1,4 @@
+package Core;
 
 import java.io.FileNotFoundException;
 
@@ -8,17 +9,21 @@ import org.newdawn.slick.Input;
 import org.newdawn.slick.state.*;
 import org.newdawn.slick.state.transition.FadeInTransition;
 
+import UI.FieldMenu;
+import Units.TestUnit;
+import Units.Unit;
+
 
 public class Gameplay extends BasicGameState
 {
-	static Map board;
-	static int activePlayer;
-	static Player[] players;
-	static Input input;
-	static boolean inMenu;
-	static FieldMenu menu;
-	static StateBasedGame game; 
-	static GameContainer gc;
+	public static Map board;
+	public static int activePlayer;
+	public static Player[] players;
+	public static Input input;
+	public static boolean inMenu;
+	public static FieldMenu menu;
+	public static StateBasedGame game; 
+	public static GameContainer gc;
 	
 	public void init(GameContainer gc, StateBasedGame game) throws SlickException
 	{

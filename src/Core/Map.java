@@ -1,3 +1,4 @@
+package Core;
 
 
 
@@ -13,14 +14,22 @@ import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.SpriteSheet;
 
+import Structures.*;
+import Units.*;
+
 public class Map 
 {	
-	protected Unit[][] mapObjects;
-	protected int[][] tiles;
-	protected int[][] cost;
-	protected int[][] structures;
+	public Unit[][] mapObjects;
+	public Structure[][] mapBuildings;
 	
-	protected Terrain[] terrains;
+	public int[][] tiles;
+	public int[][] structures;
+	
+	public int[][] cost;
+	
+	public Terrain[] terrains;
+	public ArrayList<Structure> buildings;
+	public ArrayList<Unit> units;
 	
 	protected SpriteSheet terrainSheet;
 	
@@ -162,42 +171,22 @@ public class Map
 		}		
 	}
 	
-	/*
-	public void loadTerrainDataOld() throws FileNotFoundException, SlickException
-	{
-		File terrainFile = new File("res/terrain/terrains_active.txt");
-		ArrayList<String> terrainNames = new ArrayList<String>();
-		Scanner s = new Scanner(terrainFile);
-		int count = 0;
-		while(s.hasNextLine())
-		{
-			terrainNames.add(s.nextLine());
-			count++;
-		}
-		s.close();
-		
-		error = new Image("res/art/terrain/error.png");		
-		images = new Image[count];
-		terrains = new Terrain[count];
-		
-		for(int i = 0; i < terrainNames.size(); i++)
-		{
-			try
-			{
-				images[i] = new Image("res/art/terrain/" + terrainNames.get(i) + ".png");
-			}
-			catch (RuntimeException e)
-			{
-				images[i] = error;
-			}
-			terrains[i] = new Terrain(terrainNames.get(i));
-		}		
+	public void loadBuildingData()
+	{		
+		Structure.initStructures();
+		buildings = new ArrayList<Structure>();
+		buildings.add(new City());
 	}
-	*/
+	
+	public void loadUnitData()
+	{
+		
+	}
 	
 	public void buildMap() throws FileNotFoundException, SlickException
-	{
+	{		
 		loadTerrainData();
+		loadBuildingData();
 		Scanner s = new Scanner(mapSource);
 		
 		buildProperties(s);
@@ -205,7 +194,7 @@ public class Map
 		this.tiles = new int[width][height];
 		this.cost = new int[width][height];
 		this.mapObjects = new Unit[width][height];
-		this.structures = new int[width][height];	
+		structures = new int[width][height];	
 		buildTerrain(s);
 		buildStructures(s);
 		buildObjects(s);

@@ -1,5 +1,8 @@
+package Core;
 import org.newdawn.slick.*;
 import org.newdawn.slick.state.*;
+
+import Editor.Editor;
 
 public class Ace extends StateBasedGame
 {	

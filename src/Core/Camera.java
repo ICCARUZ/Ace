@@ -1,3 +1,4 @@
+package Core;
 
 
 
@@ -38,7 +39,7 @@ public class Camera
 	int[] mousePos;
 	int[] mousePosLast;
 	
-	int[] cursorPos;
+	public int[] cursorPos;
 	float cursorSleep = 150;
 	float cursorAsleep = 0;
 	

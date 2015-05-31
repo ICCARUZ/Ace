@@ -1,5 +1,9 @@
+package Units;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.SpriteSheet;
+
+import Core.Gameplay;
+import Core.Player;
 
 public class TestUnit extends Unit
 {	

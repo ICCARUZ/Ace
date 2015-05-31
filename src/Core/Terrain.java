@@ -1,3 +1,4 @@
+package Core;
 
 
 
@@ -11,15 +12,15 @@ import org.newdawn.slick.SlickException;
 
 public class Terrain
 {
-	String name;
-	boolean solid = false;
-	boolean water = false;
-	boolean beach = false;
-	boolean mountain = false;
-	int vision = 0;
-	int movepenalty = 0;
-	int movecost = 1;
-	int defense = 0;
+	public String name;
+	public boolean solid = false;
+	public boolean water = false;
+	public boolean beach = false;
+	public boolean mountain = false;
+	public int vision = 0;
+	public int movepenalty = 0;
+	public int movecost = 1;
+	public int defense = 0;
 	public static Image def;
 	public static Image vis;
 	
