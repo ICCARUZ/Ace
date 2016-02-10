@@ -1,0 +1,7 @@
+hp 10
+type infantry
+peashooter
+move 4
+vision 5
+attack 2
+defense 0
