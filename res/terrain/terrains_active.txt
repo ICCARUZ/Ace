@@ -1,6 +1,0 @@
-plains
-mountain
-water
-shallow
-hill
-forest
